@@ -1,0 +1,93 @@
+﻿<Window 
+	x:Class="KsWare.ColorCalculator.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:KsWare.ColorCalculator"
+	mc:Ignorable="d"
+	Title="Color Calculator" Height="450" Width="800">
+	<TabControl>
+		<TabItem Header="Transparency">
+			<StackPanel>
+				<TextBlock  TextWrapping="WrapWithOverflow" Text=""/>
+				<DockPanel LastChildFill="False">
+					<Label Content="Base color:" Width="80"/>
+					<TextBox x:Name="BaseColorTextBox" Width="100" VerticalAlignment="Center"/>
+
+					<Border Name ="BaseColorDisplay" Width="16" Height="16" Margin="6 0" BorderBrush="Gray" BorderThickness="0.5"/>
+
+					<TextBlock Text="A:" Margin="6 0 3 0" VerticalAlignment="Center" Visibility="Hidden"/>
+					<TextBox x:Name="BaseATextBox" Width="30" VerticalAlignment="Center" Visibility="Hidden"/>
+					<TextBlock Text="R:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="BaseRTextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="G:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="BaseGTextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="B:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="BaseBTextBox" Width="30" VerticalAlignment="Center"/>
+
+					<TextBlock Text="H:" Margin="12 0 3 0" VerticalAlignment="Center" />
+					<TextBox x:Name="BaseHTextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="S:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="BaseSTextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="V:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="BaseVTextBox" Width="30" VerticalAlignment="Center"/>
+				</DockPanel>
+			    <DockPanel LastChildFill="False">
+				    <Label Content="Mixed color:" Width="80"/>
+				    <TextBox x:Name="MixedColorTextBox" Width="100" VerticalAlignment="Center"/>
+
+				    <Border Name ="MixedColorDisplay" Width="16" Height="16" Margin="6 0" BorderBrush="Gray" BorderThickness="0.5"/>
+
+				    <TextBlock Text="A:" Margin="6 0 3 0" VerticalAlignment="Center" Visibility="Hidden"/>
+				    <TextBox x:Name="MixedATextBox" Width="30" VerticalAlignment="Center" Visibility="Hidden"/>
+				    <TextBlock Text="R:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+				    <TextBox x:Name="MixedRTextBox" Width="30" VerticalAlignment="Center"/>
+				    <TextBlock Text="G:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+				    <TextBox x:Name="MixedGTextBox" Width="30" VerticalAlignment="Center"/>
+				    <TextBlock Text="B:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+				    <TextBox x:Name="MixedBTextBox" Width="30" VerticalAlignment="Center"/>
+
+				    <TextBlock Text="H:" Margin="12 0 3 0" VerticalAlignment="Center"/>
+				    <TextBox x:Name="MixedHTextBox" Width="30" VerticalAlignment="Center"/>
+				    <TextBlock Text="S:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+				    <TextBox x:Name="MixedSTextBox" Width="30" VerticalAlignment="Center"/>
+				    <TextBlock Text="V:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+				    <TextBox x:Name="MixedVTextBox" Width="30" VerticalAlignment="Center"/>
+			    </DockPanel>
+
+				<Button Content="Calculate" Click="CalculateButton_OnClick"/>
+				<DockPanel LastChildFill="False">
+					<Label Content="Alpha color:" Width="80"/>
+					<TextBox x:Name="CalculatedColorTextBox" Width="100" VerticalAlignment="Center"/>
+					
+					<Grid Width="16" Height="16" Margin="6 0">
+						<UniformGrid Rows="2">
+							<Rectangle Fill="Black"/>
+							<Rectangle Fill="Gray"/>
+							<Rectangle Fill="White"/>
+							<Rectangle Fill="Blue"/>
+						</UniformGrid>
+						<Border Name ="AlphaColorDisplay"  BorderBrush="Gray" BorderThickness="0.5"/>
+					</Grid>
+
+					<TextBlock Text="A:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="CalculatedATextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="R:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="CalculatedRTextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="G:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="CalculatedGTextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="B:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="CalculatedBTextBox" Width="30" VerticalAlignment="Center"/>
+
+					<TextBlock Text="H:" Margin="12 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="CalculatedHTextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="S:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="CalculatedSTextBox" Width="30" VerticalAlignment="Center"/>
+					<TextBlock Text="V:" Margin="6 0 3 0" VerticalAlignment="Center"/>
+					<TextBox x:Name="CalculatedVTextBox" Width="30" VerticalAlignment="Center"/>
+				</DockPanel>
+		    </StackPanel>
+		</TabItem>
+	</TabControl>
+</Window>
